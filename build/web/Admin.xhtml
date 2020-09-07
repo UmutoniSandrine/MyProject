@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>LIST OF ALL PATIENTS</title>
+    
+    </h:head>
+    <h:body>
+       <h2>List of Patients</h2>
+       <h:dataTable value="#{patientModel.patients}" var="pa" border="1">
+           
+           <h:column>
+               <f:facet name="header">Username</f:facet>
+               #{pa.username}
+           </h:column>
+           <h:column>
+               <f:facet name="header">Password</f:facet>
+               #{pa.password}
+           </h:column>
+            <h:column>
+                <f:facet name="header">First Name</f:facet>
+                #{pa.firstName}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Last Name</f:facet>
+                #{pa.lastName}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Gender</f:facet>
+                #{pa.gender}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Country</f:facet>
+                #{pa.country}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Date OF Birth</f:facet>
+                #{pa.country}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Medical Card</f:facet>
+                #{pa.medicalCard}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Address</f:facet>
+                #{pa.address}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Telephone</f:facet>
+                #{pa.telephone}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                #{pa.email}
+            </h:column>
+           <h:column>
+                <f:facet name="header">Actions</f:facet>
+                <h:form>
+                    <h:commandButton value="UPDATE" action="#{patientModel.updateEnvironment(pa)}"/>
+                    <h:commandButton value="DELETE" action="#{patientModel.delete(pa)}"/>
+                </h:form>
+            </h:column>
+        </h:dataTable>
+        <h:commandButton value="Cancel" action="#{patientModel.makeRegistration()}" rendered="#{patientModel.update}"/>
+    </h:body>
+</html>
+

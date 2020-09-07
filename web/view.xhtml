@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title> MAKE A POINT </title>
+        <h:outputStylesheet name="boos/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+       <h2>Where Do U Need To Go Exactly?</h2>
+       <h:form>
+           
+           <h:panelGrid columns="2">
+               
+               <div>
+                   <h:commandButton value="Logout" action="patientloginform.xhtml"    styleClass="btn btn-primary"/><br>
+                       
+                   </br>
+                 
+                      
+               </div>
+               <div>
+                   <h:commandButton value="Make Appointment" action="bookingTable.xhtml" styleClass="btn btn-success mx-2"/>
+               </div>
+               <div>
+                   <h:commandButton value="Your Status View" action="YourStatusView.xhtml"  styleClass="btn btn-danger"/>
+               </div>
+              
+                </h:panelGrid>
+              
+       </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title> LAST APPOINTMENT </title>
+        <h:outputStylesheet name="boos/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+       <h2>Check Your Last Appointment</h2>
+       <h:form>
+           <div class="container">
+               <h:dataTable value="#{patientModel.statusView()}" var="bo" border="4" styleClass="table table-bordered">
+               <h:column>
+                   <f:facet name="header">Names</f:facet>
+                   #{bo.patient.firstName} #{bo.patient.lastName}
+               </h:column>
+               <h:column>
+                       <f:facet name="header">Gender</f:facet>  
+                       #{bo.patient.gender}
+                </h:column>
+               <h:column >
+                   <f:facet name="header">Last Appointment</f:facet>
+                   #{bo.meetingTime}
+               </h:column>
+               <h:column>
+                   <f:facet name="header">Reason</f:facet>
+                   #{bo.reason}
+               </h:column>
+               <h:column>
+                   <f:facet name="header">Dentist Names</f:facet>
+                   #{bo.dentist.firstName} #{bo.dentist.lastName}
+               </h:column>
+               <h:column>
+                   <f:facet name="header">Medical Card</f:facet>
+                   #{bo.patient.medicalCard}
+               </h:column>
+                   <h:column>
+                       <f:facet name="header">Dentist Email</f:facet>
+                       #{bo.dentist.email}
+                   </h:column> 
+                   <h:column>
+                       <f:facet name="header">Status</f:facet>
+                       #{bo.status}
+                   </h:column>
+           </h:dataTable>
+              
+               
+           </div>
+           
+        </h:form>
+    </h:body>
+</html>
+

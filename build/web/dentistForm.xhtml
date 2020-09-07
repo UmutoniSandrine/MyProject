@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>DENTIST FORM </title>
+        <h:outputStylesheet name="boos/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+       <h2>DENTIST REGISTRATION FORM</h2>
+       <h:form>
+           
+           <h:panelGrid columns="3">
+               
+               <h:outputLabel value="Username"> </h:outputLabel>
+               <h:inputText label="Username" id="username" disabled="#{dentistsModel.update}" value="#{dentistsModel.dent.username}" required="true">
+                    <f:validateRequired />
+                </h:inputText>
+
+                <h:message for="username" style="color:red" />
+
+               
+                <h:outputLabel value="Password:  "></h:outputLabel>
+                <h:inputText label="Password" id="password" value="#{dentistsModel.dent.password}" required="true"/>
+                    
+                       <h:message for="password" style="color:red" />
+                     
+             
+                <h:outputLabel value="FirstName: "></h:outputLabel>
+                <h:inputText label="FirstName" id="firstName" value="#{dentistsModel.dent.firstName}" required="true"/>
+                
+                
+                
+                <h:message for="firstName" style="color:red" />
+                <h:outputLabel value="LastName: "></h:outputLabel>
+                <h:inputText label="LastName" id="lastName" value="#{dentistsModel.dent.lastName}" required="true"/>
+                
+                <h:message for="lastName" style="color:red" />
+                <h:outputLabel value="Gender:  "></h:outputLabel>
+                <h:selectOneMenu label="Gender"  id="gender" value="#{dentistsModel.dent.gender}" required="true">
+                        <f:selectItem itemValue="Male" itemLabel="MALE"/>
+                        <f:selectItem itemValue="Female" itemLabel="FEMALE"/>
+                    </h:selectOneMenu>
+                <h:message for="gender" style="color: red" />
+                
+                <h:outputLabel value="Telephone:"></h:outputLabel>
+                <h:inputText label="Telephone" id="telephone" value="#{dentistsModel.dent.telephone}" required="true"/>
+               
+                <h:message for="telephone" style="color: red" />
+                <h:outputLabel value="Email:"></h:outputLabel>
+                <h:inputText label="Email" id="email" value="#{dentistsModel.dent.email}" required="true"/>
+           
+                <h:message for="email" style="color: red" />
+            </h:panelGrid>
+           <h:commandButton value="#{dentistsModel.update?'Update':'Register'}" action="#{dentistsModel.registerDentist()}"  styleClass="btn btn-primary"/>
+           
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title> MAKE A POINT </title>
+        <h:outputStylesheet name="boos/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+        <h2>BOOKING LIST</h2>
+        <div class="container">
+            <h:dataTable value="#{bookingModel.bookings1}" var="bo" border="1"  styleClass="table table-dark">
+                <h:column>
+                    <f:facet name="header"> Booking Id</f:facet>
+                        #{bo.bookingId}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Reason</f:facet>
+                        #{bo.reason}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Time To Meet Dentist</f:facet>
+                        #{bo.meetingTime}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Patient Username</f:facet>
+                      #{bo.patient.username}
+                 </h:column>
+                <h:column>
+                    <f:facet name="header">Patient names</f:facet>
+                        #{bo.patient.firstName} #{bo.patient.lastName}    
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Patient Gender</f:facet>
+                    #{bo.patient.gender}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Patient Date Of Birth</f:facet>
+                    #{bo.patient.dateOfBirth}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Patient's insurance</f:facet>
+                    #{bo.patient.medicalCard}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Dentist Names</f:facet>
+                    #{bo.dentist.firstName} #{bo.dentist.lastName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Status</f:facet>
+                    #{bo.status}
+                </h:column>
+                 <h:column>
+                    <f:facet name="header">Actions</f:facet>
+                    <h:form>
+                        <h:commandButton value="Accept" action="#{bookingModel.acceptAppointment(bo)}"/>
+                        <h:commandButton value="Denied" action="#{bookingModel.deniedAppointment(bo)}"/>
+                        
+                    </h:form>
+                    
+                </h:column>
+
+            </h:dataTable>
+        </div>
+    </h:body>
+</html>
+

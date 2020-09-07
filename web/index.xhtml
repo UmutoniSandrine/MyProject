@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>PATIENT FORM</title>
+        <h:outputStylesheet name="boos/css/bootstrap.min.css"/>
+        <h:outputStylesheet name="boos/css/style.css"/>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="row"><div class="col-md-3"></div><div class="col-md-6">
+                    <h2> PATIENT REGISTRATION FORM</h2>
+                    <h:form >
+                        <table > 
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="Username"> </h:outputLabel></td><td>
+                                        <h:inputText class="form-control formtext" label="Username" id="username" disabled="#{patientModel.update}" value="#{patientModel.patient.username}" required="true">
+                                            <f:validateRequired />
+                                        </h:inputText>
+
+                                        <h:message for="username" style="color:red" />
+                                    </td></tr>
+                            </div>
+
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="Password:  "></h:outputLabel></td><td>
+                                        <h:inputText class="form-control formtext" label="Password" id="password" value="#{patientModel.patient.password}" required="true"/>
+
+                                        <h:message for="password" style="color:red" />
+                                    </td></tr>     
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="FirstName: "></h:outputLabel></td><td>
+                                        <h:inputText class="form-control formtext" label="FirstName" id="firstName" value="#{patientModel.patient.firstName}" required="true"/>
+
+
+
+                                        <h:message for="firstName" style="color:red" />
+                                    </td></tr>
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="LastName: "></h:outputLabel></td><td>
+                                        <h:inputText class="form-control" label="LastName" id="lastName" value="#{patientModel.patient.lastName}" required="true"/>
+
+                                        <h:message for="lastName" style="color:red" />
+                                    </td></tr>
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel  value="Gender:  "></h:outputLabel></td><td>
+                                        <h:selectOneMenu class="form-control" label="Gender"  id="gender" value="#{patientModel.patient.gender}" required="true">
+                                            <f:selectItem itemValue="Male" itemLabel="MALE"/>
+                                            <f:selectItem itemValue="Female" itemLabel="FEMALE"/>
+                                        </h:selectOneMenu>
+                                        <h:message for="gender" style="color: red" />
+                                    </td></tr>
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="Country: "></h:outputLabel></td><td>
+                                        <h:selectOneMenu class="form-control" label="Country" id="country" value="#{patientModel.patient.country}">
+                                            <f:selectItem itemValue="Afghanistan" itemLabel="Afghanistan"/>
+                                            <f:selectItem itemValue="Albania" itemLabel="Albania"/>
+                                            <f:selectItem itemValue="Algeria" itemLabel="Algeria"/>
+                                            <f:selectItem itemValue="Andorra" itemLabel="Andorra"/>
+                                            <f:selectItem itemValue="Angola" itemLabel="Angola"/>
+                                            <f:selectItem itemValue="AntiguaBarbuda" itemLabel="AntiguaBarbuda"/>
+                                            <f:selectItem itemValue="AntiguaBarbuda" itemLabel="AntiguaBarbuda"/>
+                                            <f:selectItem itemValue="Argentina" itemLabel="Argentina"/>
+                                            <f:selectItem itemValue="Armenia" itemLabel="Armenia"/>
+                                            <f:selectItem itemValue="Australia" itemLabel="Australia"/>
+                                            <f:selectItem itemValue="Austria" itemLabel="Austria"/>
+                                            <f:selectItem itemValue="AustrianEmpire" itemLabel="AustrianEmpire"/>
+                                            <f:selectItem itemValue="Azerbaijan" itemLabel="Azerbaijan"/>
+                                            <f:selectItem itemValue="Baden" itemLabel="Baden"/>
+                                            <f:selectItem itemValue="BahamasThe" itemLabel="BahamasThe"/>
+                                            <f:selectItem itemValue="Bahrain" itemLabel="Bahrain"/>
+                                            <f:selectItem itemValue="Bangladesh" itemLabel="Bangladesh"/>
+                                            <f:selectItem itemValue="Barbados" itemLabel="Barbados"/>
+                                            <f:selectItem itemValue="Bavaria" itemLabel="Bavaria"/>
+                                            <f:selectItem itemValue="Belarus" itemLabel="Belarus"/>
+                                            <f:selectItem itemValue="Belgium" itemLabel="Belgium"/>
+                                            <f:selectItem itemValue="Belize" itemLabel="Belize"/>
+                                            <f:selectItem itemValue="Benin" itemLabel="Benin"/>
+                                            <f:selectItem itemValue="Bolivia" itemLabel="Bolivia"/>
+                                            <f:selectItem itemValue="BosniaHerzegovina" itemLabel="BosniaHerzegovina"/>
+                                            <f:selectItem itemValue="Botswana" itemLabel="Botswana"/>
+                                            <f:selectItem itemValue="Brazil" itemLabel="Brazil"/>
+                                            <f:selectItem itemValue="Brunei" itemLabel="Brunei"/>
+                                            <f:selectItem itemValue="BrunswickLüneburg" itemLabel="BrunswickLüneburg"/>
+                                            <f:selectItem itemValue="Bulgaria" itemLabel="Bulgaria"/>
+                                            <f:selectItem itemValue="BurkinaFaso" itemLabel="BurkinaFaso"/>
+                                            <f:selectItem itemValue="Burma" itemLabel="Burma"/>
+                                            <f:selectItem itemValue="Burundi" itemLabel="Burundi"/>
+                                            <f:selectItem itemValue="CaboVerde" itemLabel="CaboVerde"/>
+                                            <f:selectItem itemValue="Cambodia" itemLabel="Cambodia"/>
+                                            <f:selectItem itemValue="Cameroon" itemLabel="Cameroon"/>
+                                            <f:selectItem itemValue="Canada" itemLabel="Canada"/>
+                                            <f:selectItem itemValue="CaymanIslandsThe" itemLabel="CaymanIslandsThe"/>
+                                            <f:selectItem itemValue="CentralAfricanRepublic" itemLabel="CentralAfricanRepublic"/>
+                                            <f:selectItem itemValue="CentralAmericanFederation" itemLabel="CentralAmericanFederation"/>
+                                            <f:selectItem itemValue="Chad" itemLabel="Chad"/>
+                                            <f:selectItem itemValue="Chile" itemLabel="Chile"/>
+                                            <f:selectItem itemValue="China" itemLabel="China"/>
+                                            <f:selectItem itemValue="Colombia" itemLabel="Colombia"/>
+                                            <f:selectItem itemValue="Comoros" itemLabel="Comoros"/>
+                                            <f:selectItem itemValue="CongoFreeStateThe" itemLabel="CongoFreeStateThe"/>
+                                            <f:selectItem itemValue="CostaRica" itemLabel="CostaRica"/>
+                                            <f:selectItem itemValue="IvoryCost" itemLabel="IvoryCost"/>
+                                            <f:selectItem itemValue="Croatia" itemLabel="Croatia"/>
+                                            <f:selectItem itemValue="Cuba" itemLabel="Cuba"/>
+                                            <f:selectItem itemValue="Cyprus" itemLabel="Cyprus"/>
+                                            <f:selectItem itemValue="Czechia" itemLabel="Czechia"/>
+                                            <f:selectItem itemValue="Czechoslovakia" itemLabel="Czechoslovakia"/>
+                                            <f:selectItem itemValue="DemocraticRepublicoftheCongo" itemLabel="DemocraticRepublicoftheCongo"/>
+                                            <f:selectItem itemValue="Denmark" itemLabel="Denmark"/>
+                                            <f:selectItem itemValue="Djibouti" itemLabel="Djibouti"/>
+                                            <f:selectItem itemValue="Dominica" itemLabel="Dominica"/>
+                                            <f:selectItem itemValue="DominicanRepublic" itemLabel="DominicanRepublic"/>
+                                            <f:selectItem itemValue="DuchyofParmaThe" itemLabel="DuchyofParmaThe"/>
+                                            <f:selectItem itemValue="EastGermany" itemLabel="EastGermany"/>
+                                            <f:selectItem itemValue="Ecuador" itemLabel="Ecuador"/>
+                                            <f:selectItem itemValue="Egypt" itemLabel="Egypt"/>
+                                            <f:selectItem itemValue="ElSalvador" itemLabel="ElSalvador"/>
+                                            <f:selectItem itemValue="EquatorialGuinea" itemLabel="EquatorialGuinea"/>
+                                            <f:selectItem itemValue="Eritrea" itemLabel="Eritrea"/>
+                                            <f:selectItem itemValue="Estonia" itemLabel="Estonia"/>
+                                            <f:selectItem itemValue="Eswatini" itemLabel="Eswatini"/>
+                                            <f:selectItem itemValue="Ethiopia" itemLabel="Ethiopia"/>
+                                            <f:selectItem itemValue="FederalGovernmentofGermany" itemLabel="FederalGovernmentofGermany"/>
+                                            <f:selectItem itemValue="Fiji" itemLabel="Fiji"/>
+                                            <f:selectItem itemValue="Finland" itemLabel="Finland"/>
+                                            <f:selectItem itemValue="France" itemLabel="France"/>
+                                            <f:selectItem itemValue="Gabon" itemLabel="Gabon"/>
+                                            <f:selectItem itemValue="GambiaThe" itemLabel="GambiaThe"/>
+                                            <f:selectItem itemValue="Georgia" itemLabel="Georgia"/>
+                                            <f:selectItem itemValue="Germany" itemLabel="Germany"/>
+                                            <f:selectItem itemValue="Ghana" itemLabel="Ghana"/>
+                                            <f:selectItem itemValue="GrandDuchyTuscanyThe" itemLabel="GrandDuchyTuscanyThe"/>
+                                            <f:selectItem itemValue="Greece" itemLabel="Greece"/>
+                                            <f:selectItem itemValue="Grenada" itemLabel="Grenada"/>
+                                            <f:selectItem itemValue="Guatemala" itemLabel="Guatemala"/>
+                                            <f:selectItem itemValue="Guinea" itemLabel="Guinea"/>
+                                            <f:selectItem itemValue="GuineaBissau" itemLabel="GuineaBissau"/>
+                                            <f:selectItem itemValue="Guyana" itemLabel="Guyana"/>
+                                            <f:selectItem itemValue="Haiti" itemLabel="Haiti"/>
+                                            <f:selectItem itemValue="Hanover" itemLabel="Hanover"/>
+                                            <f:selectItem itemValue="HanseaticRepublics" itemLabel="HanseaticRepublics"/>
+                                            <f:selectItem itemValue="Hawaii" itemLabel="Hawaii"/>
+                                            <f:selectItem itemValue="Hesse" itemLabel="Hesse"/>
+                                            <f:selectItem itemValue="HolySee" itemLabel="HolySee"/>
+                                            <f:selectItem itemValue="Honduras" itemLabel="Honduras"/>
+                                            <f:selectItem itemValue="Hungary" itemLabel="Hungary"/>
+                                            <f:selectItem itemValue="Iceland" itemLabel="Iceland"/>
+                                            <f:selectItem itemValue="India" itemLabel="India"/>
+                                            <f:selectItem itemValue="Indonesia" itemLabel="Indonesia"/>
+                                            <f:selectItem itemValue="Iran" itemLabel="Iran"/>
+                                            <f:selectItem itemValue="Iraq" itemLabel="Iraq"/>
+                                            <f:selectItem itemValue="Ireland" itemLabel="Ireland"/>
+                                            <f:selectItem itemValue="Israel" itemLabel="Israel"/>
+                                            <f:selectItem itemValue="Italy" itemLabel="Italy"/>
+                                            <f:selectItem itemValue="Jamaica" itemLabel="Jamaica"/>
+                                            <f:selectItem itemValue="Japan" itemLabel="Japan"/>
+                                            <f:selectItem itemValue="Jordan" itemLabel="Jordan"/>
+                                            <f:selectItem itemValue="Kazakhstan" itemLabel="Kazakhstan"/>
+                                            <f:selectItem itemValue="Kenya" itemLabel="Kenya"/>
+                                            <f:selectItem itemValue="KingdomofSerbia" itemLabel="KingdomofSerbia"/>
+                                            <f:selectItem itemValue="Kiribati" itemLabel="Kiribati"/>
+                                            <f:selectItem itemValue="Korea" itemLabel="Korea"/>
+                                            <f:selectItem itemValue="Kosovo" itemLabel="Kosovo"/>
+                                            <f:selectItem itemValue="Kuwait" itemLabel="Kuwait"/>
+                                            <f:selectItem itemValue="Kyrgyzstan" itemLabel="Kyrgyzstan"/>
+                                            <f:selectItem itemValue="Laos" itemLabel="Laos"/>
+                                            <f:selectItem itemValue="Latvia" itemLabel="Latvia"/>
+                                            <f:selectItem itemValue="Lebanon" itemLabel="Lebanon"/>
+                                            <f:selectItem itemValue="Lesotho" itemLabel="Lesotho"/>
+                                            <f:selectItem itemValue="LewChew" itemLabel="LewChew"/>
+                                            <f:selectItem itemValue="Liberia" itemLabel="Liberia"/>
+                                            <f:selectItem itemValue="Libya" itemLabel="Libya"/>
+                                            <f:selectItem itemValue="Liechtenstein" itemLabel="Liechtenstein"/>
+                                            <f:selectItem itemValue="Lithuania" itemLabel="Lithuania"/>
+                                            <f:selectItem itemValue="Luxembourg" itemLabel="Luxembourg"/>
+                                            <f:selectItem itemValue="Madagascar" itemLabel="Madagascar"/>
+                                            <f:selectItem itemValue="Malawi" itemLabel="Malawi"/>
+                                            <f:selectItem itemValue="Malaysia" itemLabel="Malaysia"/>
+                                            <f:selectItem itemValue="Maldives" itemLabel="Maldives"/>
+                                            <f:selectItem itemValue="Mali" itemLabel="Mali"/>
+                                            <f:selectItem itemValue="Malta" itemLabel="Malta"/>
+                                            <f:selectItem itemValue="MarshallIslands" itemLabel="MarshallIslands"/>
+                                            <f:selectItem itemValue="Mauritania" itemLabel="Mauritius"/>
+                                            <f:selectItem itemValue="MecklenburgSchwerin" itemLabel="MecklenburgSchwerin"/>
+                                            <f:selectItem itemValue="MecklenburgStrelitz" itemLabel="MecklenburgStrelitz"/>
+                                            <f:selectItem itemValue="Mexico" itemLabel="Mexico"/>
+                                            <f:selectItem itemValue="Micronesia" itemLabel="Micronesia"/>
+                                            <f:selectItem itemValue="Moldova" itemLabel="Moldova"/>
+                                            <f:selectItem itemValue="Monaco" itemLabel="Monaco"/>
+                                            <f:selectItem itemValue="Mongolia" itemLabel="Mongolia"/>
+                                            <f:selectItem itemValue="Montenegro" itemLabel="Montenegro"/>
+                                            <f:selectItem itemValue="Morocco" itemLabel="Morocco"/>
+                                            <f:selectItem itemValue="Mozambique" itemLabel="Mozambique"/>
+                                            <f:selectItem itemValue="Namibia" itemLabel="Namibia"/>
+                                            <f:selectItem itemValue="Nassau" itemLabel="Nassau"/>
+                                            <f:selectItem itemValue="Nauru" itemLabel="Nauru"/>
+                                            <f:selectItem itemValue="Nepal" itemLabel="Nepal"/>
+                                            <f:selectItem itemValue="NetherlandsThe" itemLabel="NetherlandsThe"/>
+                                            <f:selectItem itemValue="NewZealand" itemLabel="NewZealand"/>
+                                            <f:selectItem itemValue="Nicaragua" itemLabel="Nicaragua"/>
+                                            <f:selectItem itemValue="Niger" itemLabel="Niger"/>
+                                            <f:selectItem itemValue="Nigeria" itemLabel="Nigeria"/>
+                                            <f:selectItem itemValue="NorthGermanConfederation" itemLabel="NorthGermanConfederation"/>
+                                            <f:selectItem itemValue="NorthGermanUnion" itemLabel="NorthGermanUnion"/>
+                                            <f:selectItem itemValue="NorthMacedonia" itemLabel="NorthMacedonia"/>
+                                            <f:selectItem itemValue="Norway" itemLabel="Norway"/>
+                                            <f:selectItem itemValue="Oldenburg" itemLabel="Oldenburg"/>
+                                            <f:selectItem itemValue="Oman" itemLabel="Oman"/>
+                                            <f:selectItem itemValue="OrangeFreeState" itemLabel="OrangeFreeState"/>
+                                            <f:selectItem itemValue="Pakistan" itemLabel="Pakistan"/>
+                                            <f:selectItem itemValue="Palau" itemLabel="Palau"/>
+                                            <f:selectItem itemValue="Panama" itemLabel="Panama"/>
+                                            <f:selectItem itemValue="PapalStates" itemLabel="PapalStates"/>
+                                            <f:selectItem itemValue="PapuaNewGuinea" itemLabel="PapuaNewGuinea"/>
+                                            <f:selectItem itemValue="Paraguay" itemLabel="Paraguay"/>
+                                            <f:selectItem itemValue="Peru" itemLabel="Peru"/>
+                                            <f:selectItem itemValue="Philippines" itemLabel="Philippines"/>
+                                            <f:selectItem itemValue="PiedmontSardinia" itemLabel="PiedmontSardinia"/>
+                                            <f:selectItem itemValue="Poland" itemLabel="Poland"/>
+                                            <f:selectItem itemValue="Portugal" itemLabel="Portugal"/>
+                                            <f:selectItem itemValue="Qatar" itemLabel="Qatar"/>
+                                            <f:selectItem itemValue="RepublicofGenoa" itemLabel="RepublicofGenoa"/>
+                                            <f:selectItem itemValue="SouthKorea" itemLabel="SouthKorea"/>
+                                            <f:selectItem itemValue="RepublicoftheCongo" itemLabel="RepublicoftheCongo"/>
+                                            <f:selectItem itemValue="Romania" itemLabel="Romania"/>
+                                            <f:selectItem itemValue="Russia" itemLabel="Russia"/>
+                                            <f:selectItem itemValue="Rwanda" itemLabel="Rwanda"/>
+                                            <f:selectItem itemValue="SaintKittsandNevis" itemLabel="SaintKittsandNevis"/>
+                                            <f:selectItem itemValue="SaintLucia" itemLabel="SaintLucia"/>
+                                            <f:selectItem itemValue="SaintVincentandtheGrenadines" itemLabel="SaintVincentandtheGrenadines"/>
+                                            <f:selectItem itemValue="Samoa" itemLabel="Samoa"/>
+                                            <f:selectItem itemValue="SanMarino" itemLabel="SanMarino"/>
+                                            <f:selectItem itemValue="SaoTomeandPrincipe" itemLabel="SaoTomeandPrincipe"/>
+                                            <f:selectItem itemValue="SaudiArabia" itemLabel="SaudiArabia"/>
+                                            <f:selectItem itemValue="SchaumburgLippe" itemLabel="SchaumburgLippe"/>
+                                            <f:selectItem itemValue="Senegal" itemLabel="Senegal"/>
+                                            <f:selectItem itemValue="Serbia" itemLabel="Serbia"/>
+                                            <f:selectItem itemValue="Seychelles" itemLabel="Seychelles"/>
+                                            <f:selectItem itemValue="SierraLeone" itemLabel="SierraLeone"/>
+                                            <f:selectItem itemValue="Singapore" itemLabel="Singapore"/>
+                                            <f:selectItem itemValue="Slovakia" itemLabel="Slovakia"/>
+                                            <f:selectItem itemValue="SolomonIslandsThe" itemLabel="SolomonIslandsThe"/>
+                                            <f:selectItem itemValue="Somalia" itemLabel="Somalia"/>
+                                            <f:selectItem itemValue="SouthAfrica" itemLabel="SouthAfrica"/>
+                                            <f:selectItem itemValue="SouthSudan" itemLabel="SouthSudan"/>
+                                            <f:selectItem itemValue="Spain" itemLabel="Spain"/>
+                                            <f:selectItem itemValue="SriLanka" itemLabel="SriLanka"/>
+                                            <f:selectItem itemValue="Sudan" itemLabel="Sudan"/>
+                                            <f:selectItem itemValue="Suriname" itemLabel="Suriname"/>
+                                            <f:selectItem itemValue="Sweden" itemLabel="Sweden"/>
+                                            <f:selectItem itemValue="Switzerland" itemLabel="Switzerland"/>
+                                            <f:selectItem itemValue="Syria" itemLabel="Syria"/>
+                                            <f:selectItem itemValue="Tajikistan" itemLabel="Tajikistan"/>
+                                            <f:selectItem itemValue="Tanzania" itemLabel="Tanzania"/>
+                                            <f:selectItem itemValue="Texas" itemLabel="Texas"/>
+                                            <f:selectItem itemValue="Thailand" itemLabel="Thailand"/>
+                                            <f:selectItem itemValue="TimorLeste" itemLabel="TimorLeste"/>
+                                            <f:selectItem itemValue="Togo" itemLabel="Togo"/>
+                                            <f:selectItem itemValue="Tonga" itemLabel="Tonga"/>
+                                            <f:selectItem itemValue="TrinidadandTobago" itemLabel="TrinidadandTobago"/>
+                                            <f:selectItem itemValue="Tunisia" itemLabel="Tunisia"/>
+                                            <f:selectItem itemValue="Turkey" itemLabel="Turkey"/>
+                                            <f:selectItem itemValue="Turkmenistan" itemLabel="Turkmenistan"/>
+                                            <f:selectItem itemValue="Tuvalu" itemLabel="Tuvalu"/>
+                                            <f:selectItem itemValue="TwoSicilies" itemLabel="TwoSicilies"/>
+                                            <f:selectItem itemValue="Uganda" itemLabel="Uganda"/>
+                                            <f:selectItem itemValue="Ukraine" itemLabel="Ukraine"/>
+                                            <f:selectItem itemValue="UnionofSovietSocialistRepublics" itemLabel="UnionofSovietSocialistRepublics"/>
+                                            <f:selectItem itemValue="UnitedArabEmiratesThe" itemLabel="UnitedArabEmiratesThe"/>
+                                            <f:selectItem itemValue="UnitedKingdomThe" itemLabel="UnitedKingdomThe"/>
+                                            <f:selectItem itemValue="Uruguay" itemLabel="Uruguay"/>
+                                            <f:selectItem itemValue="Uzbekistan" itemLabel="Uzbekistan"/>
+                                            <f:selectItem itemValue="Vanuatu" itemLabel="Vanuatu"/>
+                                            <f:selectItem itemValue="Venezuela" itemLabel="Venezuela"/>
+                                            <f:selectItem itemValue="Vietnam" itemLabel="Vietnam"/>
+                                            <f:selectItem itemValue="Württemberg" itemLabel="Württemberg"/>
+                                            <f:selectItem itemValue="Yemen" itemLabel="Yemen"/>
+                                            <f:selectItem itemValue="Zambia" itemLabel="Zambia"/>
+                                            <f:selectItem itemValue="Zimbabwe" itemLabel="Zimbabwe"/>
+                                        </h:selectOneMenu>
+                                        <h:message for="country" style="color: red" />
+                                    </td></tr>
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="DateOfBirth: "></h:outputLabel></td><td>
+                                        <h:inputText class="form-control" label="DateOfBirth" id="dateOfBirth" value="#{patientModel.patient.dateOfBirth}" required="true"/>
+
+                                        <h:message for="dateOfBirth" style="color:red" />
+                                    </td></tr>
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="Medical Card: "></h:outputLabel></td><td>
+                                        <h:selectOneMenu class="form-control" label="Medical Card" id="medicalCard" value="#{patientModel.patient.medicalCard}">
+                                            <f:selectItem itemValue="PRIVATE" itemLabel="PRIVATE"/>
+                                            <f:selectItem itemValue="RSSB" itemLabel="RSSB"/>
+                                            <f:selectItem itemValue="RAMA" itemLabel="RAMA"/>
+                                            <f:selectItem itemValue="MMI" itemLabel="MMI"/>
+                                        </h:selectOneMenu>
+                                        <h:message for="medicalCard" style="color:red" />
+                                    </td></tr>
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="Address:"></h:outputLabel></td><td>
+                                        <h:inputText class="form-control" label="Address" id="address" value="#{patientModel.patient.address}" required="true"/>
+
+                                        <h:message for="address" style="color: red" />
+                                    </td></tr>
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="Telephone:"></h:outputLabel></td><td>
+                                        <h:inputText class="form-control" label="Telephone" id="telephone" value="#{patientModel.patient.telephone}" required="true"/>
+
+                                        <h:message for="telephone" style="color: red" />
+                                    </td></tr>
+                            </div>
+                            <div class="form-group">
+                                <tr><td>
+                                        <h:outputLabel value="Email:"></h:outputLabel></td><td>
+                                        <h:inputText class="form-control" label="Email" id="email" value="#{patientModel.patient.email}" required="true"/>
+
+                                        <h:message for="email" style="color: red" />
+                                    </td></tr>
+                            </div>
+                            <tr><td></td><td>
+                                    <h:commandButton value="#{patientModel.update?'Update':'Register'}" action="#{patientModel.register()}"  styleClass="btn btn-primary"/></td></tr>
+                        </table> 
+                    </h:form>
+                </div>
+            </div></div>
+    </h:body>
+</html>
+

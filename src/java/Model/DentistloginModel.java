@@ -41,9 +41,9 @@ public class DentistloginModel implements Serializable{
         if(dentist!=null && dentist.getPassword().equals(password)){
           
             HttpSession session =(HttpSession)FacesContext.getCurrentInstance().
-                    getExternalContext().getSession(false);
+                    getExternalContext().getSession(true);
             session.setAttribute("aunthicatedDentist", dentist);
-            return"appointmentLists";
+            return "appointmentLists";
         }else{
             FacesMessage msg = new FacesMessage("Invalid Username or Password");
             FacesContext.getCurrentInstance().addMessage(null, msg);

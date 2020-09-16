@@ -44,7 +44,7 @@ public class PatientLoginModel{
             HttpSession session =(HttpSession)FacesContext.getCurrentInstance().
                     getExternalContext().getSession(false);
             session.setAttribute("aunthicatedUSer", patient);
-            return"view";
+            return "view";
         }else{
             FacesMessage msg = new FacesMessage("Invalid Username or Password");
             FacesContext.getCurrentInstance().addMessage(null, msg);

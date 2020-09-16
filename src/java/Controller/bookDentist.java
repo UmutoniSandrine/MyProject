@@ -18,13 +18,14 @@ import javax.servlet.http.HttpSession;
  */
 public class bookDentist {
     
-     public List dentistHistory(){
+     public List dentistHistory(Dentist dentist){
         List<Booking> bookings = new BookingDao().bookingList();
          System.out.println("##"+bookings.size());
         List<Booking> bk = new ArrayList<>();
-        HttpSession session =(HttpSession) FacesContext.getCurrentInstance().
-                getExternalContext().getSession(true);
-        Dentist dentist = (Dentist) session.getAttribute("aunthicatedDentist");
+//        HttpSession session =(HttpSession) FacesContext.getCurrentInstance().
+//                getExternalContext().getSession(false);
+//        Dentist dentist = (Dentist) session.getAttribute("aunthicatedDentist");
+         System.out.println((dentist == null) ? "null":dentist.toString());
         String f = dentist.getFirstName();
         String l =dentist.getLastName();
         for (Booking booking1 : bookings) {

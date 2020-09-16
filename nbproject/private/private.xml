@@ -5,13 +5,20 @@
         <group>
             <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/WEB-INF/web.xml</file>
             <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/patientloginform.xhtml</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/java/Model/BookingModel.java</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/bookingTable.xhtml</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/resources/boos/css/styles.css</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/appointmentLists.xhtml</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/java/Controller/bookDentist.java</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/java/Model/DentistloginModel.java</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/view.xhtml</file>
             <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/conf/MANIFEST.MF</file>
             <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/Welcome.xhtml</file>
             <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/java/Controller/DentistDao.java</file>
-            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/resources/boos/css/styles.css</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/java/Model/DentistsModel.java</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/java/Domain/Dentist.java</file>
+            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/index.xhtml</file>
             <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/java/Model/PatientLoginModel.java</file>
-            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/web/appointmentLists.xhtml</file>
-            <file>file:/home/bitwayiki/NetBeansProjects/MyProject/src/java/Model/DentistloginModel.java</file>
         </group>
     </open-files>
 </project-private>

@@ -5,6 +5,7 @@
  */
 package Domain;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -15,7 +16,7 @@ import javax.persistence.Id;
  * @author katy
  */
 @Entity
-public class Dentist {
+public class Dentist implements Serializable{
     @Id
      private String username;
      private String password;

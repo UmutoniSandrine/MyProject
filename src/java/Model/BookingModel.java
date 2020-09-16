@@ -33,22 +33,25 @@ public class BookingModel implements Serializable {
     private Dentist dent;
     private boolean update = false;
     private List<Booking> bookings = new BookingDao().bookingList();
-    private List<Booking> bookings1= new bookDentist().dentistHistory();
+    private List<Booking> bookings1 = new bookDentist().dentistHistory(this.getLoggedInDentist());
 
     @PostConstruct
-    public void init(){
-        booking=new Booking();
-        dent=new Dentist();
+    public void init() {
+        booking = new Booking();
+        dent = new Dentist();
     }
+
     public BookingModel() {
- 
+
     }
-    public void acceptAppointment(Booking bl){
+
+    public void acceptAppointment(Booking bl) {
         bl.setStatus(Status.approved);
         new BookingDao().updateBooking(bl);
-        
+
     }
-    public void deniedAppointment(Booking bl){
+
+    public void deniedAppointment(Booking bl) {
         bl.setStatus(Status.denied);
         new BookingDao().updateBooking(bl);
     }
@@ -61,7 +64,6 @@ public class BookingModel implements Serializable {
         this.bookings1 = bookings1;
     }
 
-    
     public Dentist getDent() {
         return dent;
     }
@@ -69,8 +71,6 @@ public class BookingModel implements Serializable {
     public void setDent(Dentist dent) {
         this.dent = dent;
     }
-    
-    
 
     public Booking getBooking() {
         return booking;
@@ -95,11 +95,9 @@ public class BookingModel implements Serializable {
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }
-    
-    
 
     public void makeAppointment(Patient pp) {
-        
+
         String msg = "";
         if (update) {
             booking.setDentist(dent);
@@ -120,7 +118,6 @@ public class BookingModel implements Serializable {
 
     }
 
-
     public void UpdateAppoointment(Booking b) {
         update = true;
         b = booking;
@@ -131,4 +128,14 @@ public class BookingModel implements Serializable {
         booking = new Booking();
     }
 
+    public Dentist getLoggedInDentist() {
+        HttpSession session = (HttpSession) FacesContext.getCurrentInstance().
+                getExternalContext().getSession(false);
+        Dentist dentist = (Dentist) session.getAttribute("aunthicatedDentist");
+        System.out.println((dentist == null) ? "null" : dentist.toString());
+        return dentist==null ? new Dentist() : dentist;
+    }
+    public String goToBookingTable(){
+        return "bookingTable.xhtml";
+    }
 }

@@ -1,0 +1,38 @@
+body {
+    margin: 12px;
+    background-color:beige;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color:black;
+    text-align: left;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    }
+    nav a{
+      margin-left:35px;
+      color:black;
+      text-decoration:none;
+      
+    }
+    nav a:hover{
+      color:green;
+      transition: all .7s ease;
+    }
+    a:visited {
+      color:black;
+    }
+   
+
+    .theme-progress-bar-dark {
+      background-color:darkslategrey;
+      
+    }
+    .progress {
+       border-radius:12px;
+    }
+    
+
+
